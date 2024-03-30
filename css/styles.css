@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section#inicio{
+    min-height: 100vh;
+    background: url("../img/fondo.jpeg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+#inicio.inicio2{
+    background: url('../img/fondo_2.jpeg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.fila{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 70vh;
+    padding-top: 120px;
+}
+
+.col-izq,
+.col-der{
+    width: 50%;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 40px;
+    min-height: 600px;
+}
+
+h2{
+    font-size: 40px;
+    color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+}
+
+button{
+    background: white;
+    color: #ff0000;
+    padding: 10px 30px;
+    margin: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(0.8);
+    background: black;
+    color: #ff0000;
+}
+
+#figura{
+    width: 250px;
+    height: 250px;
+    background: #ff8800;
+    margin: 100px auto;
+    transition: 1s;
+}
+
+#figura.circulo{
+    transform: rotate(360deg) scale(1.5);
+    border-radius: 50%;
+    background: rgb(69, 37, 252);
+}
+
+#figura.rectangulo{
+    height: 300px;
+    background: #c8ff00;
+}
+
+#figura.degradado{
+    background: linear-gradient(to right, #1b1ee8, #2d2bb4, #4a48cc, rgb(116, 169, 230), #b2c8e0);
+}
+
+#figura.gif{
+    width: 300px;
+    height: 320px; 
+    background: url('../img/patito.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+#figura.luna{
+    width: 300px;
+    height: 300px;
+    border-radius: 60%;
+    background: #1d3474;
+    box-shadow: 0 0 20px #ffff,
+                inset -50px 0 30px #030202;
+} 
+
+
+#figura.estrella{
+    background: transparent;
+    position: relative;
+    height: 0;
+    width: 0;
+    border-bottom: 100px solid #0833f1;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+#figura.estrella::after{
+    background: transparent;
+    position: absolute;
+    border-top: 100px solid #0833f1;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    content: "";
+    top: 30px;
+    left: -50px;
+}
+
+#figura.triangulo{
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid  rgb(4, 228, 4);
+    background: transparent;
+}
+
+
+#figura.top{
+    transform: translateY(-100px);
+}
+
+#figura.Bottom{
+    transform: translateY(100px);
+}
+
+#figura.Left{
+    transform: translateX(-100px);
+}
+
+#figura.Right{
+    transform: translateX(100px);
+}
+
+#figura.diagonal{
+    transform: rotate(45deg);
+}
+
+#panel-lateral{
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left: -450px;
+    top: 0;
+    z-index: 9;
+    background: #020202;
+    transition: 1s;
+}
+
+#panel-lateral.active{
+    left: 0;
+}
+
+#panel-lateral h2{
+    color: #ffffff;
+    font-size: 40px;
+    padding: 40px 30px;
+
+}
+#panel-lateral ul{
+   width: 80%;
+   margin: 20px auto;
+    text-align: center;
+    
+}
+
+#panel-lateral ul a{
+    display: block;
+    padding: 20px;
+    background:rgba(0, 255, 255, 0.829);
+    color: #ffffff;
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 20px;
+   
+ }
+
+ #panel-lateral ul a:hover{
+    border-radius: 20px;
+    
+}
+
+#panel-superior{
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    top: -500px;
+    left: 0;
+    z-index: 10;
+    background: rgba(6, 205, 255, 0.89);
+    transition: 1s;
+}
+
+#panel-superior.active{
+    top: 0;
+}
+
+#panel-superior h2{
+    text-align: center;
+}
+
+#panel-superior iframe{
+    position:relative;
+    left: 35%;
+    top: 15px;
+}
+
+#figura.ingresar{
+    background: #00ffbfaf;
+}
